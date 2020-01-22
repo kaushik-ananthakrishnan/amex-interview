@@ -66,5 +66,5 @@ You can add the following dependency to your application to test the HR client
 
 There is a sample client test application which uses the HR client for fetching the employee record in the github url mentioned below
 ```shell
-http://localhost:8090/hrs/swagger-ui.html
+https://github.com/kaushik-ananthakrishnan/sample-hrs-consumer/blob/master/hrs-client-test/src/main/java/com/amex/hrs/hrsclienttest/HrsClientTestApplication.java
 ```
