@@ -1,12 +1,13 @@
-package com.amex.interview.hrs.generated.invoker.auth;
+package com.amex.interview.hrs.client.invoker.auth;
 
+import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.util.Base64Utils;
 import org.springframework.util.MultiValueMap;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-01-21T12:35:15.375+05:30")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-01-22T11:19:29.124+05:30")
 public class HttpBasicAuth implements Authentication {
     private String username;
     private String password;

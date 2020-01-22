@@ -11,11 +11,11 @@
  */
 
 
-package com.amex.interview.hrs.generated.api;
+package com.amex.interview.hrs.client.api;
 
-import com.amex.interview.hrs.generated.model.Employee;
-import org.junit.Test;
+import com.amex.interview.hrs.client.model.Employee;
 import org.junit.Ignore;
+import org.junit.Test;
 
 /**
  * API tests for EmployeeControllerApi
@@ -31,12 +31,12 @@ public class EmployeeControllerApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
     public void getEmployeeUsingGETTest() {
-        Long id = null;
+        Integer id = null;
         Employee response = api.getEmployeeUsingGET(id);
 
         // TODO: test validations

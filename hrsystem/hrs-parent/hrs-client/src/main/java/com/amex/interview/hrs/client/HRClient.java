@@ -1,14 +1,14 @@
 package com.amex.interview.hrs.client;
 
-import com.amex.interview.hrs.generated.api.EmployeeControllerApi;
-import com.amex.interview.hrs.generated.model.Employee;
+import com.amex.interview.hrs.client.api.EmployeeControllerApi;
+import com.amex.interview.hrs.client.model.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class HRClient {
-    @Autowired
-    private EmployeeControllerApi employeeControllerApi;
-
-    public Employee getEmployeeById(Long id){
+    private final EmployeeControllerApi employeeControllerApi = new EmployeeControllerApi();
+    public Employee getEmployeeById(Integer id){
         return employeeControllerApi.getEmployeeUsingGET(id);
     }
 }

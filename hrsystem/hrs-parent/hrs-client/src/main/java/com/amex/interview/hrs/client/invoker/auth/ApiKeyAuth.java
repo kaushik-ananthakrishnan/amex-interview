@@ -1,9 +1,9 @@
-package com.amex.interview.hrs.generated.invoker.auth;
+package com.amex.interview.hrs.client.invoker.auth;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.util.MultiValueMap;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-01-21T12:35:15.375+05:30")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-01-22T11:19:29.124+05:30")
 public class ApiKeyAuth implements Authentication {
     private final String location;
     private final String paramName;

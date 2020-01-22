@@ -1,4 +1,4 @@
-package com.amex.interview.hrs.generated.invoker;
+package com.amex.interview.hrs.client.invoker;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -7,6 +7,7 @@ import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpRequest;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.InvalidMediaTypeException;
 import org.springframework.http.MediaType;
 import org.springframework.http.RequestEntity;
@@ -37,6 +38,7 @@ import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
 import java.text.DateFormat;
 import java.text.ParseException;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -48,12 +50,12 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.TimeZone;
 
-import com.amex.interview.hrs.generated.invoker.auth.Authentication;
-import com.amex.interview.hrs.generated.invoker.auth.HttpBasicAuth;
-import com.amex.interview.hrs.generated.invoker.auth.ApiKeyAuth;
-import com.amex.interview.hrs.generated.invoker.auth.OAuth;
+import com.amex.interview.hrs.client.invoker.auth.Authentication;
+import com.amex.interview.hrs.client.invoker.auth.HttpBasicAuth;
+import com.amex.interview.hrs.client.invoker.auth.ApiKeyAuth;
+import com.amex.interview.hrs.client.invoker.auth.OAuth;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-01-21T12:35:15.375+05:30")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-01-22T11:19:29.124+05:30")
 @Component("com.amex.interview.hrs.client.invoker.ApiClient")
 public class ApiClient {
     public enum CollectionFormat {

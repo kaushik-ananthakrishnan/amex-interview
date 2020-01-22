@@ -1,0 +1,60 @@
+---
+swagger: '2.0'
+info:
+  description: Api Documentation
+  version: '1.0'
+  title: Api Documentation
+  termsOfService: urn:tos
+  contact: {}
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0
+host: localhost:8090
+basePath: "/hrs"
+tags:
+  - name: employee-controller
+    description: Employee Controller
+paths:
+  "/v1/employees/{id}":
+    get:
+      tags:
+        - employee-controller
+      summary: Find employee by id
+      operationId: getEmployeeUsingGET
+      produces:
+        - application/json
+      parameters:
+        - name: id
+          in: path
+          description: id
+          required: true
+          type: integer
+          format: int64
+      responses:
+        '200':
+          description: OK
+          schema:
+            "$ref": "#/definitions/Employee"
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+      deprecated: false
+definitions:
+  Employee:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int64
+      name:
+        type: string
+      reports:
+        type: array
+        items:
+          "$ref": "#/definitions/Employee"
+      title:
+        type: string
+    title: Employee

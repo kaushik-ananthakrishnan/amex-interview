@@ -1,6 +1,6 @@
 package com.amex.interview.hrs.controller;
 
-import com.amex.interview.hrs.entitiy.EmployeeEntity;
+import com.amex.interview.hrs.exception.ApiException;
 import com.amex.interview.hrs.model.Employee;
 import com.amex.interview.hrs.service.EmployeeService;
 import io.swagger.annotations.ApiOperation;
@@ -17,10 +17,14 @@ public class EmployeeController {
     @Autowired
     private EmployeeService employeeService;
 
+    /**
+     * This method returns the employee matching the given id
+     * @param employeeId
+     * @return employee
+     */
     @GetMapping(path="/{id}", produces = "application/json")
     @ApiOperation(value = "Find employee by id", response = Employee.class)
-    public Employee getEmployee(@PathVariable(value = "id") Long employeeId)
-    {
+    public Employee getEmployee(@PathVariable(value = "id") Integer employeeId){
         return employeeService.getEmployee(employeeId);
     }
 }

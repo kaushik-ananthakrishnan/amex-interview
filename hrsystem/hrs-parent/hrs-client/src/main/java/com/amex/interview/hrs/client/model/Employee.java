@@ -11,11 +11,15 @@
  */
 
 
-package com.amex.interview.hrs.generated.model;
+package com.amex.interview.hrs.client.model;
 
 import java.util.Objects;
-
+import java.util.Arrays;
+import com.amex.interview.hrs.client.model.Employee;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +27,7 @@ import java.util.List;
 /**
  * Employee
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-01-21T12:35:15.375+05:30")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-01-22T11:19:29.124+05:30")
 public class Employee {
   @JsonProperty("id")
   private Long id = null;

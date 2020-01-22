@@ -1,4 +1,4 @@
-package com.amex.interview.hrs.generated.invoker.auth;
+package com.amex.interview.hrs.client.invoker.auth;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.util.MultiValueMap;

@@ -10,7 +10,7 @@
  * Do not edit the class manually.
  */
 
-package com.amex.interview.hrs.generated.invoker;
+package com.amex.interview.hrs.client.invoker;
 
 import com.fasterxml.jackson.databind.util.ISO8601DateFormat;
 import com.fasterxml.jackson.databind.util.ISO8601Utils;

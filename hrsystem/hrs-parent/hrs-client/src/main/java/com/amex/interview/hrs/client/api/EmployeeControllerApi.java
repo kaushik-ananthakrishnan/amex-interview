@@ -1,9 +1,10 @@
-package com.amex.interview.hrs.generated.api;
+package com.amex.interview.hrs.client.api;
 
-import com.amex.interview.hrs.generated.invoker.ApiClient;
+import com.amex.interview.hrs.client.invoker.ApiClient;
 
-import com.amex.interview.hrs.generated.model.Employee;
+import com.amex.interview.hrs.client.model.Employee;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -16,13 +17,14 @@ import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.util.UriComponentsBuilder;
 import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.core.io.FileSystemResource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-01-21T12:35:15.375+05:30")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-01-22T11:19:29.124+05:30")
 @Component("com.amex.interview.hrs.client.api.EmployeeControllerApi")
 public class EmployeeControllerApi {
     private ApiClient apiClient;
@@ -55,7 +57,7 @@ public class EmployeeControllerApi {
      * @return Employee
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public Employee getEmployeeUsingGET(Long id) throws RestClientException {
+    public Employee getEmployeeUsingGET(Integer id) throws RestClientException {
         return getEmployeeUsingGETWithHttpInfo(id).getBody();
     }
 
@@ -70,7 +72,7 @@ public class EmployeeControllerApi {
      * @return ResponseEntity&lt;Employee&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<Employee> getEmployeeUsingGETWithHttpInfo(Long id) throws RestClientException {
+    public ResponseEntity<Employee> getEmployeeUsingGETWithHttpInfo(Integer id) throws RestClientException {
         Object postBody = null;
         
         // verify the required parameter 'id' is set
