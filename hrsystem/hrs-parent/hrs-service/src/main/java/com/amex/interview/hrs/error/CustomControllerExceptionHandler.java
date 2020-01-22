@@ -15,7 +15,19 @@ import org.springframework.web.servlet.NoHandlerFoundException;
 public class CustomControllerExceptionHandler {
     @ExceptionHandler(NoHandlerFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    public @ResponseBody ApiException handleNoHandlerFound(NoHandlerFoundException e, WebRequest request) {
-        return new ApiException(HttpStatus.NOT_FOUND, ErrorConstants.ENDPOINT_NOT_FOUND_MESSAGE, ErrorConstants.ENDPOINT_NOT_FOUND_ERROR_CODE);
+    public @ResponseBody ApiException handleNoHandlerFound(final NoHandlerFoundException e,
+                                                           final WebRequest request) {
+        return new ApiException(HttpStatus.NOT_FOUND,
+                ErrorConstants.ENDPOINT_NOT_FOUND_MESSAGE,
+                ErrorConstants.ENDPOINT_NOT_FOUND_ERROR_CODE);
+    }
+
+    @ExceptionHandler({Exception.class})
+    @ResponseStatus(value = HttpStatus.INTERNAL_SERVER_ERROR)
+    public @ResponseBody ApiException handleException(final Exception exception,
+                                                      final WebRequest request) {
+        return new ApiException(HttpStatus.INTERNAL_SERVER_ERROR,
+                ErrorConstants.ENDPOINT_NOT_FOUND_MESSAGE,
+                ErrorConstants.ENDPOINT_NOT_FOUND_ERROR_CODE);
     }
 }
