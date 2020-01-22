@@ -12,7 +12,7 @@ import java.util.Set;
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Employee {
-    private Long id;
+    private Integer id;
     private String name;
     private String title;
     private Set<Employee> reports;
