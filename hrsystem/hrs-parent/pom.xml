@@ -15,12 +15,18 @@
   </parent>
   <properties>
     <java.version>1.8</java.version>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <swagger.springfox.version>2.9.2</swagger.springfox.version>
+    <model.mapper.version>2.3.5</model.mapper.version>
+    <h2.db.version>1.4.199</h2.db.version>
+    <lombok.version>1.18.10</lombok.version>
   </properties>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.1</version>
+      <version>4.12</version>
       <scope>test</scope>
     </dependency>
   </dependencies>

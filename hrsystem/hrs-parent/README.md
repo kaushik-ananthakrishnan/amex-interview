@@ -16,7 +16,7 @@ Building the API client library requires:
 
 To test the service run the following commands:
 ```shell
-cd hrsystem/hrs-parent/
+cd amex-interview/hrsystem/hrs-parent/
 mvn clean install
 java -jar hrs-service/target/hrs-service-1.0.0-SNAPSHOT.jar
 ```
@@ -25,7 +25,14 @@ The above commands will compile, deploy and start the application. You can hit t
 http://localhost:8090/hrs/v1/employees/1
 ```
 
-The application DB is pre-loaded with the below employee record
+The application DB is inserted with the following records on load
+```shell
+INSERT INTO EMPLOYEE (NAME, TITLE, MANAGER_ID) VALUES ('Kaushik', 'Ananthakrishnan', NULL);
+INSERT INTO EMPLOYEE ( NAME, TITLE, MANAGER_ID) VALUES ('Jeff', 'Bezos', 1);
+INSERT INTO EMPLOYEE (NAME, TITLE, MANAGER_ID) VALUES ('Bill', 'Gates', 1);
+```
+
+This will create 3 Employee records of which the client only knows about employee of id 1 which produces the following json:
 ```shell
 {
     "id": 1,
